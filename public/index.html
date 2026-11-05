@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Pixelated Stickers</title>
+  <meta name="description" content="Download them and get pixelated.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="/profile.png" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip" href="#grid">Skip to stickers</a>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <!-- Drop your own photo at public/profile.png. The .svg is a placeholder. -->
+      <img class="avatar" id="avatar" src="/profile.png" alt="Profile picture"
+           width="128" height="128">
+      <h1 class="hero__title">My Pixelated Stickers</h1>
+      <p class="hero__text">Download them and get pixelated.</p>
+    </div>
+  </header>
+
+  <div class="toolbar" role="region" aria-label="Sticker actions">
+    <p class="toolbar__count" id="count" aria-live="polite">Loading stickers</p>
+    <div class="toolbar__actions">
+      <button class="btn btn--ghost" id="select-all" type="button" disabled>Select all</button>
+      <button class="btn btn--ghost" id="clear" type="button" disabled>Clear</button>
+      <button class="btn" id="download-selected" type="button" disabled>Install selected (0)</button>
+      <button class="btn btn--primary" id="download-all" type="button" disabled>Download all (.zip)</button>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <ul class="grid" id="grid" aria-busy="true"></ul>
+  </main>
+
+  <footer class="footer">
+    <p>Free to use. Stay pixelated.</p>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
